@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -7,7 +8,6 @@
 
 body{
     min-height:100vh;
-    overflow:hidden;
 
     display:flex;
     justify-content:center;
@@ -20,6 +20,8 @@ body{
         #fad0c4,
         #a18cd1
     );
+
+    overflow:hidden;
 }
 
 .container{
@@ -132,6 +134,32 @@ button:hover{
     font-size:22px;
 }
 
+.event-location{
+    margin-top:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.event-location a{
+    color:white;
+    text-decoration:none;
+    font-size:1.15rem;
+    font-weight:700;
+    transition:.3s;
+}
+
+.event-location a:hover{
+    color:#ffe082;
+    transform:scale(1.05);
+}
+
+.event-location span{
+    font-size:.95rem;
+    opacity:.85;
+}
+
 @keyframes fadeIn{
     from{
         opacity:0;
@@ -165,38 +193,6 @@ button:hover{
     animation:float linear infinite;
 }
 
-.event-location{
-    margin-top:20px;
-
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-}
-
-.event-location a{
-    color:white;
-
-    text-decoration:none;
-
-    font-size:1.15rem;
-
-    font-weight:700;
-
-    transition:.3s;
-}
-
-.event-location a:hover{
-    color:#ffe082;
-
-    transform:scale(1.05);
-}
-
-.event-location span{
-    font-size:.95rem;
-
-    opacity:.85;
-}
-
 @keyframes float{
     from{
         transform:translateY(0);
@@ -211,14 +207,26 @@ button:hover{
 
 @media screen and (max-width:768px){
 
+    body{
+        padding:0;
+        align-items:center;
+    }
+
     .card{
-        width:85%;
-        padding:18px 15px;
-        border-radius:20px;
+        width:100vw;
+        min-height:100vh;
+
+        border-radius:0;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+
+        padding:20px;
     }
 
     #form-card{
-        max-width:300px;
+        max-width:none;
     }
 
     #form-card h1{
@@ -230,9 +238,8 @@ button:hover{
     }
 
     .invitation-title{
-        font-size:1.1rem;
+        font-size:1.05rem;
         white-space:nowrap;
-        line-height:1.2;
         margin-bottom:10px;
     }
 
@@ -283,13 +290,8 @@ button:hover{
 
 @media screen and (max-width:400px){
 
-    .card{
-        width:88%;
-        padding:15px 12px;
-    }
-
     .invitation-title{
-        font-size:0.95rem;
+        font-size:0.9rem;
     }
 
     .vy-image{
@@ -305,3 +307,4 @@ button:hover{
         font-size:0.68rem;
     }
 }
+
