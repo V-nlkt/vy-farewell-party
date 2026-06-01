@@ -25,6 +25,12 @@ body{
 }
 
 .container{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     z-index:2;
 }
 
@@ -208,25 +214,24 @@ button:hover{
 @media screen and (max-width:768px){
 
     body{
-        padding:0;
-        align-items:center;
+        padding:15px;
     }
 
     .card{
-        width:100vw;
-        min-height:100vh;
+        width:100%;
+        max-width:340px;
 
-        border-radius:0;
+        min-height:auto;
 
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
+        padding:20px 18px;
 
-        padding:20px;
+        border-radius:20px;
+
+        display:block;
     }
 
     #form-card{
-        max-width:none;
+        max-width:340px;
     }
 
     #form-card h1{
@@ -289,6 +294,10 @@ button:hover{
 /* Very Small Phones */
 
 @media screen and (max-width:400px){
+
+    .card{
+        max-width:300px;
+    }
 
     .invitation-title{
         font-size:0.9rem;
